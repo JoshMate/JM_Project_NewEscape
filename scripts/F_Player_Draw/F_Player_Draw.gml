@@ -21,7 +21,7 @@ function F_Player_Draw_DrawGUI(){
 	tempHealthBarX2	= tempHealthBarX1 + 512
 	tempHealthBarY1	= tempViewY - 100
 	tempHealthBarY2	= tempHealthBarY1 +32
-	tempHealthBarValue = (playerStatsHealth / playerStatsHealthMaxFinal) * 100
+	tempHealthBarValue = (entStatHealth / entStatHealthMaxFinal) * 100
 	
 	draw_healthbar(tempHealthBarX1,tempHealthBarY1,tempHealthBarX2,tempHealthBarY2,tempHealthBarValue,c_black,c_red,c_red,0,true,true)
 	
@@ -30,7 +30,7 @@ function F_Player_Draw_DrawGUI(){
 	tempHealthBarX2	= tempHealthBarX1 + 512
 	tempHealthBarY1	= tempViewY - (64)
 	tempHealthBarY2	= tempHealthBarY1 + 32
-	tempHealthBarValue = (playerStatsStamina / playerStatsStaminaMaxFinal) * 100
+	tempHealthBarValue = (actorStatsStamina / actorStatsStaminaMaxFinal) * 100
 	
 	draw_healthbar(tempHealthBarX1,tempHealthBarY1,tempHealthBarX2,tempHealthBarY2,tempHealthBarValue,c_black,c_green,c_green,0,true,true)
 	

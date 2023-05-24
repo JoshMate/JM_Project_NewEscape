@@ -1,22 +1,31 @@
 function OB_Logic_Controls_Step(){
 	
 	// Check for presses
-	controlsInputMoveUp							= keyboard_check(global.settingBindcontrolsMoveUp);
-	controlsInputMoveDown						= keyboard_check(global.settingBindcontrolsMoveDown);
-	controlsInputMoveLeft							= keyboard_check(global.settingBindcontrolsMoveLeft);
-	controlsInputMoveRight						= keyboard_check(global.settingBindcontrolsMoveRight);
+	controlsInputMoveUp							= keyboard_check(global.settingBindPlayerMoveUp);
+	controlsInputMoveDown						= keyboard_check(global.settingBindPlayerMoveDown);
+	controlsInputMoveLeft							= keyboard_check(global.settingBindPlayerMoveLeft);
+	controlsInputMoveRight						= keyboard_check(global.settingBindPlayerMoveRight);
 	
-	controlsInputActionSprint						= keyboard_check(global.settingBindcontrolsActionSprint)
-	controlsInputActionDodge						= keyboard_check_pressed(global.settingBindcontrolsActionDodge)
+	controlsInputActionSprint						= keyboard_check(global.settingBindPlayerActionSprint)
+	controlsInputActionDodge						= keyboard_check_pressed(global.settingBindPlayerActionDodge)
 	
-	controlsInputActionAbility1					= keyboard_check_pressed(global.settingBindcontrolsActionAbility1)
-	controlsInputActionAbility2					= keyboard_check_pressed(global.settingBindcontrolsActionAbility2)
-	controlsInputActionAbility3					= keyboard_check_pressed(global.settingBindcontrolsActionAbility3)
-	controlsInputActionAbility4					= keyboard_check_pressed(global.settingBindcontrolsActionAbility4)
-	controlsInputActionAbility5					= keyboard_check_pressed(global.settingBindcontrolsActionAbility5)
-	controlsInputActionAbility6					= keyboard_check_pressed(global.settingBindcontrolsActionAbility6)
+	controlsInputAttackPrimary					= mouse_check_button(global.settingBindPlayerAttackPrimary)
+	controlsInputAttackSecondary				= mouse_check_button(global.settingBindPlayerAttackSecondary)
+	controlsInputAttackTertiary					= mouse_check_button(global.settingBindPlayerAttackTertiary)
 	
-	controlsInputSyemMenu						= keyboard_check_pressed(global.settingBindcontrolsSystemMenu)
+	controlsInputActionUse							= keyboard_check_pressed(global.settingBindPlayerActionUse)
+	controlsInputActionReload						= keyboard_check_pressed(global.settingBindPlayerActionReload)
+	
+	controlsInputAction1							= keyboard_check_pressed(global.settingBindPlayerAction1)
+	controlsInputAction2							= keyboard_check_pressed(global.settingBindPlayerAction2)
+	controlsInputAction3							= keyboard_check_pressed(global.settingBindPlayerAction3)
+	controlsInputAction4							= keyboard_check_pressed(global.settingBindPlayerAction4)
+	controlsInputAction5							= keyboard_check_pressed(global.settingBindPlayerAction5)
+	controlsInputAction6							= keyboard_check_pressed(global.settingBindPlayerAction6)
+	controlsInputAction7							= keyboard_check_pressed(global.settingBindPlayerAction7)
+
+	
+	controlsInputSyemMenu						= keyboard_check_pressed(global.settingBindPlayerSystemMenu)
 	
 	// DEBUG - End game on pressing escape
 	if (controlsInputSyemMenu) {

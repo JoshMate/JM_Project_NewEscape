@@ -1,1 +1,1 @@
-F_Ent_BASE_Init()
+F_Ent_BASE_Main_Init()

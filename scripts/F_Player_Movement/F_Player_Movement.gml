@@ -1,39 +1,38 @@
-function F_Player_Movement_Init() {
-	
-	// Init Player Movement Vars
-	playerMovementCounter						= 0
-	playerMovementCanMove						= true
-	playerMovementIsSprinting					= false
-
-}
-
 function F_Player_Movement_Step() {
 	
 
 	// Check Input For Sprintings
-	playerMovementIsSprinting = false
-	if (playerInputActionSprint) playerMovementIsSprinting = true
+	actorMovementIsSprinting = false
+	if (global.logicControls.controlsInputActionSprint) actorMovementIsSprinting = true
 	
 	// Handle Sprinting
-	if(playerMovementIsSprinting){
-		F_Util_Debug_Log("Sprinting")
-		playerMovementCounter += (playerStatsMoveSpeedFinal * playerStatsSprintMultFinal) 
+	if(actorMovementIsSprinting and actorStatsStamina > 0){
+		actorMovementCounter += (actorStatsMoveSpeedFinal * actorStatsSprintMultFinal) 
+		actorMovementSprintCounter += global.settingActorStaminaSprintDrain
+		
+		// Drain Stamina from sprinting
+		while (actorMovementSprintCounter >= global.settingCounterMax){
+		
+			actorMovementSprintCounter -= global.settingCounterMax;
+			actorStatsStamina -= 1
+			if (actorStatsStamina <= 0) {actorStatsStamina = 0}
+		
+		}
 	}
-	if(!playerMovementIsSprinting){
-		playerMovementCounter += playerStatsMoveSpeedFinal
-		F_Util_Debug_Log(playerStatsMoveSpeedFinal)
+	if(!actorMovementIsSprinting or actorStatsStamina <= 0){
+		actorMovementCounter += actorStatsMoveSpeedFinal
 	}
 	
 
-	while (playerMovementCounter >= global.settingCounterMax)
+	while (actorMovementCounter >= global.settingCounterMax)
 	{
 		F_Util_Debug_Log("InsideMovement")
 		// Execute Movement
-		playerMovementCounter -=  global.settingCounterMax;
+		actorMovementCounter -=  global.settingCounterMax;
 	
 		// Get Player Input direction
-		tempMoveX = -((playerInputMoveLeft		- playerInputMoveRight));
-		tempMoveY = -((playerInputMoveUp		- playerInputMoveDown));
+		tempMoveX = -((global.logicControls.controlsInputMoveLeft - global.logicControls.controlsInputMoveRight));
+		tempMoveY = -((global.logicControls.controlsInputMoveUp - global.logicControls.controlsInputMoveDown));
 		tempMoveX_CanGo = 1;
 		tempMoveY_CanGo = 1;
 	
@@ -45,7 +44,7 @@ function F_Player_Movement_Step() {
 		{
 			for (i = 0; i < tempCollosionListX_Size; i++;)
 			{ 
-				if(tempCollosionListX[| i].worldWallCanWalkThrough == false)tempMoveX_CanGo = 0;
+				if(tempCollosionListX[| i].entWorldCanWalkOver == false)tempMoveX_CanGo = 0;
 			}
 		}
 		
@@ -53,7 +52,7 @@ function F_Player_Movement_Step() {
 		ds_list_destroy(tempCollosionListX)
 		
 		// Execute X movement
-		if(playerMovementCanMove == true and tempMoveX_CanGo) x += tempMoveX;
+		if(actorMovementCanMove == true and tempMoveX_CanGo) x += tempMoveX;
 		
 
 		// Y Collisions (Sort through a list of all obstacles touching the player)
@@ -64,7 +63,7 @@ function F_Player_Movement_Step() {
 		{
 			for (i = 0; i < tempCollosionListY_Size; i++;)
 			{ 
-				if(tempCollosionListY[| i].worldWallCanWalkThrough == false)tempMoveY_CanGo = 0;
+				if(tempCollosionListY[| i].entWorldCanWalkOver == false)tempMoveY_CanGo = 0;
 			}
 		}
 		
@@ -72,7 +71,7 @@ function F_Player_Movement_Step() {
 		ds_list_destroy(tempCollosionListY)
 		
 		// Execute Y movement
-		if(playerMovementCanMove == true and tempMoveY_CanGo) y += tempMoveY;
+		if(actorMovementCanMove == true and tempMoveY_CanGo) y += tempMoveY;
 	}
 
 	
