@@ -14,8 +14,6 @@ function F_Player_Main_Step(){
 
 function F_Player_Main_GUI(){
 	
-	// DRAW HUD
-	F_Player_Draw_DrawGUI()
 	
 }
 

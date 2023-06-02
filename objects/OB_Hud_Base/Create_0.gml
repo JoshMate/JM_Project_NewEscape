@@ -10,4 +10,4 @@ image_speed = 0;
 // Some Vars for the HUD Component
 hudScriptOnLeftClick					= F_Default
 hudScriptOnRightClick					= F_Default
-hudScriptWhileHovering				= F_Default
+hudScriptWhileHovering					= F_Default
