@@ -1,25 +1,34 @@
+function F_Player_Movement_Init() {
+
+	playerMovementSprintCounter					= 0
+	playerMovementIsSprinting					= false
+
+}
+
+
+
 function F_Player_Movement_Step() {
 	
 
 	// Check Input For Sprintings
-	actorMovementIsSprinting = false
-	if (global.logicControls.controlsInputActionSprint) actorMovementIsSprinting = true
+	playerMovementIsSprinting = false
+	if (global.logicControls.controlsInputActionSprint) playerMovementIsSprinting = true
 	
 	// Handle Sprinting
-	if(actorMovementIsSprinting and actorStatsStamina > 0){
-		actorMovementCounter += (actorStatsMoveSpeedFinal * actorStatsSprintMultFinal) 
-		actorMovementSprintCounter += global.settingActorStaminaSprintDrain
+	if(playerMovementIsSprinting and playerStatsStamina > 0){
+		actorMovementCounter += (actorStatsMoveSpeedFinal * playerStatsSprintMultFinal) 
+		playerMovementSprintCounter += global.settingPlayerStaminaSprintDrain
 		
 		// Drain Stamina from sprinting
-		while (actorMovementSprintCounter >= global.settingCounterMax){
+		while (playerMovementSprintCounter >= global.settingCounterMax){
 		
-			actorMovementSprintCounter -= global.settingCounterMax;
-			actorStatsStamina -= 1
-			if (actorStatsStamina <= 0) {actorStatsStamina = 0}
+			playerMovementSprintCounter -= global.settingCounterMax;
+			playerStatsStamina -= 1
+			if (playerStatsStamina <= 0) {playerStatsStamina = 0}
 		
 		}
 	}
-	if(!actorMovementIsSprinting or actorStatsStamina <= 0){
+	if(!playerMovementIsSprinting or playerStatsStamina <= 0){
 		actorMovementCounter += actorStatsMoveSpeedFinal
 	}
 	

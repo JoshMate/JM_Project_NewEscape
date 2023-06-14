@@ -44,7 +44,7 @@ function F_Hud_Main_DrawGUI(){
 	tempHealthBarX2	= tempHealthBarX1 + tempViewBarLength
 	tempHealthBarY1	= tempViewY - ((tempViewBarHeight + tempViewYBorder) * 4)
 	tempHealthBarY2	= tempHealthBarY1 + tempViewBarHeight
-	tempHealthBarValue = (global.logicPlayerEnt.actorStatsStamina / global.logicPlayerEnt.actorStatsStaminaMaxFinal) * 100
+	tempHealthBarValue = (global.logicPlayerEnt.playerStatsStamina / global.logicPlayerEnt.playerStatsStaminaMaxFinal) * 100
 	
 	draw_sprite(SP_Hud_Icon_Bar_Stamina,0,tempHealthBarX1-tempBarIconPadding,tempHealthBarY1)
 	draw_healthbar(tempHealthBarX1,tempHealthBarY1,tempHealthBarX2,tempHealthBarY2,tempHealthBarValue,c_black,c_green,c_green,0,true,true)
@@ -54,7 +54,7 @@ function F_Hud_Main_DrawGUI(){
 	tempHealthBarX2	= tempHealthBarX1 + tempViewBarLength
 	tempHealthBarY1	= tempViewY - ((tempViewBarHeight + tempViewYBorder) * 3)
 	tempHealthBarY2	= tempHealthBarY1 + tempViewBarHeight
-	tempHealthBarValue = (global.logicPlayerEnt.actorStatsStamina / global.logicPlayerEnt.actorStatsStaminaMaxFinal) * 100
+	tempHealthBarValue = (global.logicPlayerEnt.playerStatsHunger / global.logicPlayerEnt.playerStatsHungerMaxFinal) * 100
 	
 	draw_sprite(SP_Hud_Icon_Bar_Food,0,tempHealthBarX1-tempBarIconPadding,tempHealthBarY1)
 	draw_healthbar(tempHealthBarX1,tempHealthBarY1,tempHealthBarX2,tempHealthBarY2,tempHealthBarValue,c_black,c_yellow,c_yellow,0,true,true)
@@ -64,7 +64,7 @@ function F_Hud_Main_DrawGUI(){
 	tempHealthBarX2	= tempHealthBarX1 + tempViewBarLength
 	tempHealthBarY1	= tempViewY - ((tempViewBarHeight + tempViewYBorder) * 2)
 	tempHealthBarY2	= tempHealthBarY1 + tempViewBarHeight
-	tempHealthBarValue = (global.logicPlayerEnt.actorStatsStamina / global.logicPlayerEnt.actorStatsStaminaMaxFinal) * 100
+	tempHealthBarValue = (global.logicPlayerEnt.playerStatsThirst / global.logicPlayerEnt.playerStatsThirstMaxFinal) * 100
 	
 	draw_sprite(SP_Hud_Icon_Bar_Water,0,tempHealthBarX1-tempBarIconPadding,tempHealthBarY1)
 	draw_healthbar(tempHealthBarX1,tempHealthBarY1,tempHealthBarX2,tempHealthBarY2,tempHealthBarValue,c_black,c_aqua,c_aqua,0,true,true)
@@ -74,7 +74,7 @@ function F_Hud_Main_DrawGUI(){
 	tempHealthBarX2	= tempHealthBarX1 + tempViewBarLength
 	tempHealthBarY1	= tempViewY - ((tempViewBarHeight + tempViewYBorder) * 1)
 	tempHealthBarY2	= tempHealthBarY1 + tempViewBarHeight
-	tempHealthBarValue = (global.logicPlayerEnt.actorStatsStamina / global.logicPlayerEnt.actorStatsStaminaMaxFinal) * 100
+	tempHealthBarValue = (global.logicPlayerEnt.actorStatsToxic / global.logicPlayerEnt.actorStatsToxicMaxFinal) * 100
 	
 	draw_sprite(SP_Hud_Icon_Bar_Toxic,0,tempHealthBarX1-tempBarIconPadding,tempHealthBarY1)
 	draw_healthbar(tempHealthBarX1,tempHealthBarY1,tempHealthBarX2,tempHealthBarY2,tempHealthBarValue,c_black,c_purple,c_purple,0,true,true)

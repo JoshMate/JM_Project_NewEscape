@@ -6,9 +6,6 @@ function F_Logic_Globals_Init(){
 	// Version Number
 	global.settingsVersionNumber								= "0.0.1"
 	
-	// Engine Vars
-	global.settingCounterMax									= 1000
-	
 	// Graphics Settings
 	global.settingGraphicsScreenX								= 1920
 	global.settingGraphicsScreenY								= 1080
@@ -40,9 +37,17 @@ function F_Logic_Globals_Init(){
 	global.settingBindPlayerSystemMenu							= vk_escape
 	
 	// Actor Stats
-	global.settingActorStaminaSprintDrain							= 200
-	global.settingActorStaminaRegenDelaySpeed						= 10
+	global.settingPlayerStaminaSprintDrain						= 200
+	global.settingPlayerStaminaRegenDelaySpeed					= 10
 	
+	// Counter Maxs
+	global.settingCounterMax									= 1000
+	
+	global.settingCounterMaxStaminaRegenRestore					= 1000
+	global.settingCounterMaxStaminaRegenDelay					= 1000
+	
+	global.settingCounterMaxHungerDrain							= 1600
+	global.settingCounterMaxThirstDrain							= 1000
 	
 	
 	
