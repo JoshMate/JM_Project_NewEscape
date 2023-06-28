@@ -66,8 +66,8 @@ function F_Player_Stats_Step(){
 	if (playerMovementIsSprinting) {
 		playerStaminaJustUsed = true
 		//Drain Hunger and Thirst faster if Sprinting
-		playerHungerCounter += 2
-		playerThirstCounter += 2
+		playerHungerCounter += 1
+		playerThirstCounter += 1
 	}
 	
 	if(playerStaminaJustUsed) {
@@ -89,6 +89,9 @@ function F_Player_Stats_Step(){
 		playerStaminaCounter -= global.settingCounterMaxStaminaRegenRestore;
 		playerStatsStamina += 1;
 		playerStatsStamina = clamp(playerStatsStamina, 0, playerStatsStaminaMaxFinal);
+		//Drain Hunger and Thirst faster if regenerating Stamina
+		playerHungerCounter += 1
+		playerThirstCounter += 1
 	}
 	
 	// Handle Hunger and Thirst

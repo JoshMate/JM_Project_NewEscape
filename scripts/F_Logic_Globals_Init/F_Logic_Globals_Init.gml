@@ -55,7 +55,9 @@ function F_Logic_Globals_Init(){
 	
 	
 	
-	
+	// Load Resource Globals
+	F_Logic_Globals_Colours()
+	F_Logic_Globals_Strings()
 	
 	
 	//Temps

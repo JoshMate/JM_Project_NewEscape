@@ -1,0 +1,31 @@
+####################################################
+### Health
+####################################################
+
+####################################################
+### Stamina
+####################################################
+
+Drains from Sprinting
+Short delay before starts to recharge
+
+
+####################################################
+### Hunger
+####################################################
+
+Drains slower than Thirst
+Drains faster when currently regenerating Stamina
+Drains faster when currently Sprinting
+
+####################################################
+### Thirst
+####################################################
+
+Drains quicker than Hunger
+Drains faster when currently regenerating Stamina
+Drains faster when currently Sprinting
+
+####################################################
+### Toxic
+####################################################
