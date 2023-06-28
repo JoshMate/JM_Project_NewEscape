@@ -239,7 +239,7 @@
   "maintainGms1Font": false,
   "parent": {
     "name": "Fonts",
-    "path": "folders/03_Hud/Fonts.yy",
+    "path": "folders/03_UI/Fonts.yy",
   },
   "pointRounding": 0,
   "ranges": [

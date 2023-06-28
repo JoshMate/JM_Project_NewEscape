@@ -1,7 +1,7 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "OB_Hud_Base",
+  "name": "OB_UI_Panel_SideBar",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
@@ -12,7 +12,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Components",
-    "path": "folders/03_Hud/Components.yy",
+    "path": "folders/03_UI/Components.yy",
   },
   "parentObjectId": null,
   "persistent": false,
@@ -30,7 +30,10 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": null,
+  "spriteId": {
+    "name": "SP_UI_Panel_SideBar",
+    "path": "sprites/SP_UI_Panel_SideBar/SP_UI_Panel_SideBar.yy",
+  },
   "spriteMaskId": null,
   "visible": true,
 }

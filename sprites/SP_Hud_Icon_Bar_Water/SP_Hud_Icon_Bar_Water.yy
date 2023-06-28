@@ -2,9 +2,9 @@
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
   "name": "SP_Hud_Icon_Bar_Water",
-  "bbox_bottom": 31,
-  "bbox_left": 4,
-  "bbox_right": 27,
+  "bbox_bottom": 30,
+  "bbox_left": 8,
+  "bbox_right": 23,
   "bbox_top": 0,
   "bboxMode": 0,
   "collisionKind": 1,
@@ -26,7 +26,7 @@
   "origin": 0,
   "parent": {
     "name": "HealthBars",
-    "path": "folders/03_Hud/Icons/HealthBars.yy",
+    "path": "folders/03_UI/Icons/HealthBars.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

@@ -1,17 +1,17 @@
 function OB_Logic_Controls_Step(){
 	
 	// Check for presses
-	controlsInputMoveUp							= keyboard_check(global.settingBindPlayerMoveUp);
-	controlsInputMoveDown						= keyboard_check(global.settingBindPlayerMoveDown);
+	controlsInputMoveUp								= keyboard_check(global.settingBindPlayerMoveUp);
+	controlsInputMoveDown							= keyboard_check(global.settingBindPlayerMoveDown);
 	controlsInputMoveLeft							= keyboard_check(global.settingBindPlayerMoveLeft);
-	controlsInputMoveRight						= keyboard_check(global.settingBindPlayerMoveRight);
+	controlsInputMoveRight							= keyboard_check(global.settingBindPlayerMoveRight);
 	
 	controlsInputActionSprint						= keyboard_check(global.settingBindPlayerActionSprint)
 	controlsInputActionDodge						= keyboard_check_pressed(global.settingBindPlayerActionDodge)
 	
-	controlsInputAttackPrimary					= mouse_check_button(global.settingBindPlayerAttackPrimary)
-	controlsInputAttackSecondary				= mouse_check_button(global.settingBindPlayerAttackSecondary)
-	controlsInputAttackTertiary					= mouse_check_button(global.settingBindPlayerAttackTertiary)
+	controlsInputAttackPrimary						= mouse_check_button(global.settingBindPlayerAttackPrimary)
+	controlsInputAttackSecondary					= mouse_check_button(global.settingBindPlayerAttackSecondary)
+	controlsInputAttackTertiary						= mouse_check_button(global.settingBindPlayerAttackTertiary)
 	
 	controlsInputActionUse							= keyboard_check_pressed(global.settingBindPlayerActionUse)
 	controlsInputActionReload						= keyboard_check_pressed(global.settingBindPlayerActionReload)
@@ -25,12 +25,26 @@ function OB_Logic_Controls_Step(){
 	controlsInputAction7							= keyboard_check_pressed(global.settingBindPlayerAction7)
 
 	
-	controlsInputSyemMenu						= keyboard_check_pressed(global.settingBindPlayerSystemMenu)
+	controlsInputCharacterMenu						= keyboard_check_pressed(global.settingBindPlayerCharacterMenu)
+	controlsInputSyemMenu							= keyboard_check_pressed(global.settingBindPlayerSystemMenu)
 	
 	// DEBUG - End game on pressing escape
 	if (controlsInputSyemMenu) {
 		 F_Util_Debug_Log("Exiting Game Via Debug Escape!")
 		game_end();
+	}
+	
+	// Character Menu Toggle
+	if (controlsInputCharacterMenu) {
+		if (global.gameCharacterMenuIsOpen == true) {
+			global.gameCharacterMenuIsOpen = false
+			global.logicHud.hudScriptDestroyCharacterMenu();
+		}
+		else {
+			global.gameCharacterMenuIsOpen = true
+			global.logicHud.hudScriptCreateCharacterMenu();
+			
+		}
 	}
 
 }

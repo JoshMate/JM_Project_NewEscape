@@ -35,6 +35,11 @@ function F_Logic_Globals_Init(){
 	global.settingBindPlayerAction7								= ord("X")
 	
 	global.settingBindPlayerSystemMenu							= vk_escape
+	global.settingBindPlayerCharacterMenu						= vk_tab
+	
+	// Character Stats
+	global.settingCharacterMaxInventorySize						= 60
+	global.settingCharacterBaseInventorySlotsUnlocked			= 10
 	
 	// Actor Stats
 	global.settingPlayerStaminaSprintDrain						= 200
@@ -60,7 +65,8 @@ function F_Logic_Globals_Init(){
 	F_Logic_Globals_Strings()
 	
 	
-	//Temps
+	// Game States
 	global.gameHasStarted										= false
+	global.gameCharacterMenuIsOpen								= false
 
 }
