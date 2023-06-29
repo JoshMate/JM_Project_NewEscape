@@ -14,6 +14,9 @@ function F_Hud_Main_DrawGUI(){
 	// Draw HUD Health Bars
 	F_Hud_HealthBars_Draw();
 	
+	// Draw Ammo Counter 
+	F_Hud_AmmoCounter_Draw();
+	
 
 
 }

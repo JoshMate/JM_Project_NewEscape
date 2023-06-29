@@ -6,7 +6,7 @@ function F_Hud_CharacterMenu_Create(){
 	tempHudPanelWidth				= 704;
 	tempViewXPanelStartLeft			= 0
 	tempViewXPanelStartRight		= tempViewX-tempHudPanelWidth
-	tempViewInventoryStartY			= tempViewY- (384 + 22)
+	tempViewInventoryStartY			= tempViewY- (512 + 22)
 	
 	// Create Left Side Panel
 	tempNewComponent = instance_create_layer(tempViewXPanelStartLeft,0,"UI_Bottom",OB_UI_Panel_SideBar);

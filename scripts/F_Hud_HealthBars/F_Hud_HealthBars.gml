@@ -1,6 +1,6 @@
 function F_Hud_HealthBars_Draw(){
 	
-		// ########################################################
+	// ########################################################
 	// DRAW HEALTH BAR SECTION
 
 	tempViewX				= global.settingGraphicsScreenX
@@ -16,10 +16,10 @@ function F_Hud_HealthBars_Draw(){
 	tempBGBoxPaddingX = 32
 	tempBGBoxPaddingY = 32
 	tempBGBoxX1 = 0 + tempViewXScreenBorder
-	tempBGBoxY1 = (tempViewY - (((tempViewBarHeight + tempViewYBorder) * 5) + tempBGBoxPaddingY)) - tempViewYScreenBorder
-	tempBGBoxX2 = ((tempViewBarLength + tempViewXBorder) + tempBGBoxPaddingX) + tempViewXScreenBorder
+	tempBGBoxY1 = (tempViewY - (((tempViewBarHeight + tempViewYBorder) * 5) + 0)) - tempViewYScreenBorder
+	tempBGBoxX2 = ((tempViewBarLength + tempViewXBorder) + 0) + tempViewXScreenBorder
 	tempBGBoxY2 = (tempViewY) - tempViewYScreenBorder
-	tempBarIconPadding = 40
+	tempBarIconPadding = 36
 	tempBarTextPadding = 8
 	
 	draw_roundrect_color(tempBGBoxX1,tempBGBoxY1,tempBGBoxX2,tempBGBoxY2,c_dkgrey,c_dkgrey,false)

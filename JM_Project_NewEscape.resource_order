@@ -1,13 +1,17 @@
 {
   "FolderOrderSettings": [
     {"name":"00_Notes","order":1,"path":"folders/00_Notes.yy",},
+    {"name":"Art","order":2,"path":"folders/03_UI/Art.yy",},
     {"name":"Icons","order":1,"path":"folders/03_UI/Icons.yy",},
     {"name":"HealthBars","order":3,"path":"folders/03_UI/Icons/HealthBars.yy",},
     {"name":"Terrain","order":1,"path":"folders/05_Ent/World/Terrain.yy",},
-    {"name":"Art","order":2,"path":"folders/03_UI/Art.yy",},
+    {"name":"Weapons","order":1,"path":"folders/05_Ent/Item/Weapons.yy",},
+    {"name":"Unarmed","order":1,"path":"folders/05_Ent/Item/Weapons/Unarmed.yy",},
+    {"name":"AmmoCounter","order":4,"path":"folders/03_UI/Icons/AmmoCounter.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"F_Default","order":1,"path":"scripts/F_Default/F_Default.yy",},
+    {"name":"F_Hud_AmmoCounter","order":5,"path":"scripts/F_Hud_AmmoCounter/F_Hud_AmmoCounter.yy",},
     {"name":"F_Player_Main","order":2,"path":"scripts/F_Player_Main/F_Player_Main.yy",},
     {"name":"F_Hud_HealthBars","order":4,"path":"scripts/F_Hud_HealthBars/F_Hud_HealthBars.yy",},
     {"name":"SP_UI_InventorySlot_Hover","order":2,"path":"sprites/SP_UI_InventorySlot_Hover/SP_UI_InventorySlot_Hover.yy",},
@@ -40,6 +44,7 @@
     {"name":"OB_Logic_Globals","order":1,"path":"objects/OB_Logic_Globals/OB_Logic_Globals.yy",},
     {"name":"F_Player_Draw","order":1,"path":"scripts/F_Player_Draw/F_Player_Draw.yy",},
     {"name":"FNT_Button_1","order":1,"path":"fonts/FNT_Button_1/FNT_Button_1.yy",},
+    {"name":"FNT_HUD_AmmoCounterText","order":4,"path":"fonts/FNT_HUD_AmmoCounterText/FNT_HUD_AmmoCounterText.yy",},
     {"name":"OB_Logic_Controls_Step","order":3,"path":"scripts/OB_Logic_Controls_Step/OB_Logic_Controls_Step.yy",},
     {"name":"SP_UI_InventorySlot_Locked","order":3,"path":"sprites/SP_UI_InventorySlot_Locked/SP_UI_InventorySlot_Locked.yy",},
     {"name":"SP_Logic_Base","order":1,"path":"sprites/SP_Logic_Base/SP_Logic_Base.yy",},
