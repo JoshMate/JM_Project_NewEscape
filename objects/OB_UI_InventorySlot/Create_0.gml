@@ -6,8 +6,15 @@
 // Art Settings
 hudArtSprite							= sprite_index
 hudArtOnHoverSprite						= SP_UI_InventorySlot_Hover
+hudArtInvetnorySlotItemSprite			= SP_Default
 
 // Some Vars for the HUD Component
 hudScriptOnLeftClick					= F_Default
 hudScriptOnRightClick					= F_Default
 hudScriptWhileHovering					= F_Default
+
+// Invetory Specific
+inventorySlotItem						= undefined
+inventorySlotIsLocked					= false
+
+

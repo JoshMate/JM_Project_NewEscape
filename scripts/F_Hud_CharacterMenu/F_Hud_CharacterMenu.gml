@@ -1,6 +1,6 @@
 function F_Hud_CharacterMenu_Create(){
 	
-	
+	tempChar						= global.logicCharacter
 	tempViewX						= global.settingGraphicsScreenX
 	tempViewY						= global.settingGraphicsScreenY
 	tempHudPanelWidth				= 704;
@@ -31,6 +31,8 @@ function F_Hud_CharacterMenu_Create(){
 		tempNewSlotX = (tempViewXPanelStartRight + 32 + (tempInvSlotRowCount*64)) + tempInvSlotRowCount
 		tempNewSlotY = (tempViewInventoryStartY + tempInvSlotRowOfset) + tempInvSlotColCount
 		tempNewComponent = instance_create_layer(tempNewSlotX,tempNewSlotY,"UI_Middle",OB_UI_InventorySlot);
+		tempNewComponent.inventoryOwner	= tempChar
+		tempNewComponent.inventorySlotIndex = i
 		ds_list_add(tempHudCharacterMenuComponentsList, tempNewComponent)
 		tempInvSlotRowCount++;
 	
