@@ -47,7 +47,7 @@ function F_Player_Movement_Step() {
 	
 		// X Collisions (Sort through a list of all obstacles touching the player
 		tempCollosionListX = ds_list_create();
-		tempCollosionListX_Size = instance_place_list(x+tempMoveX, y, OB_Wall,tempCollosionListX,false);
+		tempCollosionListX_Size = instance_place_list(x+tempMoveX, y, OB_Wall_Concrete_Base,tempCollosionListX,false);
 		
 		if(tempCollosionListX_Size > 0)
 		{
@@ -66,7 +66,7 @@ function F_Player_Movement_Step() {
 
 		// Y Collisions (Sort through a list of all obstacles touching the player)
 		tempCollosionListY = ds_list_create();
-		tempCollosionListY_Size = instance_place_list(x, y+tempMoveY, OB_Wall,tempCollosionListY,false);
+		tempCollosionListY_Size = instance_place_list(x, y+tempMoveY, OB_Wall_Concrete_Base,tempCollosionListY,false);
 		
 		if(tempCollosionListY_Size > 0)
 		{
